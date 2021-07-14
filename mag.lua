@@ -33,7 +33,7 @@ function Mag.OnDeath(event, creature, killer) -- say message. wipe events on dea
 end
 
 function Mag.Berserk(event, delay, pCall, creature) -- berserk. cast on timer.
-	creature:CastSpell(self,27680,true)
+	creature:CastSpell(creature,27680,true)
 end
 
 function Mag.Conflag(event, delay, pCall, creature) -- conflag. cast on timer. select random target on ground.
