@@ -45,12 +45,12 @@ function Mag.Quake(event, delay, pCall, creature) -- quake, cast on timer.
 	creature:CastSpell(30657)
 end
 
-function Mag.Cage(event, creature, caster, spellid) -- cage handler. when hit by shadow grasp, apply dummy aura and stop movement. need to count to 5.
-    if creature:HasAura(30410) then
-	creature:SetRooted()
-	creature:AttackStop()
-	creature:MoveIdle()
-	creature:CastSpell(30205)
+function Mag.Cage(event, creature, caster, spellid) -- cage handler. when hit by shadow grasp, apply dummy aura and stop movement. need to count to 5.  
+	if Aura:GetStackAmount(30410)==5 then
+		creature:SetRooted()
+		creature:AttackStop()
+		creature:MoveIdle()
+		creature:CastSpell(30205)
 end
 end
 
